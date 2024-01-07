@@ -1,7 +1,7 @@
 import React from "react";
 import pattern6 from "../../assets/images/bg-pattern-home-6-about-5.svg";
-import styles from "./CallToAction.module.scss";
 import { Link } from "react-router-dom";
+import styles from "./CallToAction.module.scss";
 
 const CallToAction = () => {
   return (
