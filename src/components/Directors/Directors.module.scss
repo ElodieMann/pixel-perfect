@@ -1,0 +1,89 @@
+@import "../../styles/setup/variables.scss";
+@import "../../styles/setup/mixins.scss";
+
+.directorsContainer {
+  background-color: $deep-jungle-green;
+  padding: 140px 165px 168px;
+  position: relative;
+  & > :first-child {
+    position: absolute;
+    top: 0;
+    left: -100px;
+  }
+  & > :nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  h2 {
+    @include typography(h2);
+    text-align: center;
+    margin-bottom: 64px;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-template-rows: repeat(2, 253px);
+    row-gap: 76px;
+    column-gap: 30px;
+    list-style: none;
+    text-align: center;
+    li {
+      position: relative;
+      background-color: $sacramento-state-green;
+
+      .avatar {
+        width: 96px;
+        height: 96px;
+        border-radius: 96px;
+        border: 2px solid #c4fffe;
+        margin: 32px 0 16px;
+      }
+
+      p {
+        @include typography(body1);
+        color: $rapture-blue;
+      }
+
+      .cross {
+        width: 56px;
+        height: 56px;
+        background-color: $light-coral;
+        border-radius: 50%;
+        position: absolute;
+        @include flex-container(row, center, center, 0);
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+      }
+    }
+
+    & > :last-child {
+      padding: 35px 48px 63px;
+
+      & > :nth-child(2) {
+        @include typography(body2);
+        color: $white;
+        margin: 8px 0 24px;
+      }
+
+      .socialIcon {
+        width: 60px;
+        height: 20px;
+        @include flex-container(row, center, center, 15px);
+        margin: 0 auto;
+      }
+
+      .cross{
+        background-color: $rapture-blue;
+
+        img {
+
+            transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
