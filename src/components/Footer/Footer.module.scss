@@ -1,0 +1,38 @@
+@import "../../styles/setup/variables.scss";
+@import "../../styles/setup/mixins.scss";
+
+.footerContainer {
+  background-color: $dark-green;
+  padding: 48px 165px;
+  display: grid;
+  grid-template-columns: 285px 445px 380px;
+
+  & > :first-child {
+    @include flex-container(column, space-between, flex-start, 0px);
+
+    a {
+      text-decoration: none;
+      color: $white;
+      margin-right: 40px;
+      @include typography(body1);
+    }
+  }
+
+  & > :nth-child(2) {
+    list-style: none;
+    @include typography(body2);
+    @include flex-container(column, space-between, flex-start, 0px);
+  }
+  & > :nth-child(3) {
+    @include typography(body2);
+    @include flex-container(column, space-between, flex-end, 0px);
+
+    ul {
+      list-style: none;
+
+      width: 104px;
+      height: 24px;
+      @include flex-container(row, space-between, center, 0px);
+    }
+  }
+}
