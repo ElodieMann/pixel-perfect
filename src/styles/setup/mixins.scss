@@ -40,6 +40,7 @@
     @include typography(body1);
     @if $button-type == "primary" {
       @if $state == "normal" {
+        background-color: transparent;
         color: $white;
         border: 2px solid $white;
       } @else if $state == "hover" {
