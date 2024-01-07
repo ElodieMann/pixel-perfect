@@ -82,16 +82,36 @@
 }
 
 //FORM
-@mixin form-field-base {
-  padding: 1em;
+@mixin form-field-base($type, $state) {
+  background-color: transparent;
   color: $white;
-  border: 2px solid transparent;
-  border-radius: 4px;
-  letter-spacing: -0.115px;
-
+  border-bottom: 1px solid $white;
   line-height: 25px;
-
+  border: none;
   @include typography(body2);
+
+  padding: 0 0 17px 14px;
+  &::placeholder {
+    color: $white;
+  }
+  @if $type == "input" {
+    width: 248px;
+    height: 42px;
+    border-bottom: 1px solid $white;
+  } @else if $type == "textarea" {
+    width: 248px;
+    height: 84px;
+    border-bottom: 1px solid $white;
+  }
+
+  @if $state == "normal" {
+    opacity: 0.6;
+  } @else if $state == "active" {
+    border-bottom: 1px solid $rapture-blue;
+  } @else if $state == "error" {
+    color: $light-coral;
+    border-bottom: 1px solid $light-coral;
+  }
 
   &::placeholder {
     opacity: 0.6;

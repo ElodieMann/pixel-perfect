@@ -1,0 +1,64 @@
+@import "../../styles/setup/variables.scss";
+@import "../../styles/setup/mixins.scss";
+
+.contactContainer {
+  background-color: $midnight-green;
+  padding: 117px 163px 120px 165px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  position: relative;
+
+  & > :first-child {
+    position: absolute;
+    top: 51px;
+    left: -100px;
+  }
+
+  h1 {
+    @include typography(h1-small);
+    line-height: 100px;
+    width: 350px;
+  }
+
+  h2 {
+    @include typography(h2);
+    font-size: 32px;
+    color: $light-coral;
+    margin-bottom: 32px;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      @include flex-container(row, start, center, 23px);
+
+      img {
+        width: 72px;
+        height: 72px;
+      }
+
+      p {
+        @include typography(body1);
+        width: 445px;
+      }
+    }
+  }
+
+  form {
+    display: grid;
+    grid-template-rows: repeat(4, 540px), 1080px;
+
+    input {
+      @include form-field-base(input, normal);
+      width: 540px;
+    }
+    textarea {
+      @include form-field-base(textarea, normal);
+      width: 540px;
+    }
+    input[type="submit"] {
+      @include button-style(secondary, normal);
+    }
+  }
+}

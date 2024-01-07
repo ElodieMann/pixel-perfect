@@ -1,10 +1,15 @@
 import React from 'react';
+import Nav from '../../components/Nav/Nav';
+import ContactForm from '../../components/ContactForm/ContactForm';
+import Footer from '../../components/Footer/Footer';
 
 const Contact = () => {
     return (
-        <div>
-            
-        </div>
+        <>
+            <Nav />
+            <ContactForm />
+            <Footer />
+        </>
     );
 };
 
