@@ -1,0 +1,24 @@
+@import "../../styles/setup/variables.scss";
+@import "../../styles/setup/mixins.scss";
+
+.callToActionContainer{
+    background-color: $light-coral;
+    position: relative;
+    padding: 76px 260px  76px 263px;
+    @include flex-container(row, center, center, 260px);
+
+    img {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    h2 {
+        @include typography(h2);
+        color: $sacramento-state-green;
+    }
+
+    button{
+        @include button-style(primary, normal, dark)
+    }
+}

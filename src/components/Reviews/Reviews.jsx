@@ -1,11 +1,11 @@
 import React from "react";
-import styles from "./Reviews.module.scss";
 import pattern4 from "../../assets/images/bg-pattern-home-4-about-3.svg";
 import pattern5 from "../../assets/images/bg-pattern-home-5.svg";
 import iconquotes from "../../assets/images/icon-quotes.svg";
 import avatarkady from "../../assets/images/avatar-kady.jpg";
 import avataraiysha from "../../assets/images/avatar-aiysha.jpg";
 import avatararthur from "../../assets/images/avatar-arthur.jpg";
+import styles from "./Reviews.module.scss";
 
 const Reviews = () => {
   return (
