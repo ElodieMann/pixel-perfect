@@ -22,7 +22,7 @@ const Main = () => {
               alt="iconperson"
             />
             <div>
-              <h4>Experienced Individuals</h4>
+              <h3>Experienced Individuals</h3>
               <p>
                 Our network is made up of highly experienced professionals who
                 are passionate about what they do.
@@ -32,7 +32,7 @@ const Main = () => {
           <li>
             <img className={styles.iconcog} src={iconcog} alt="iconcog" />
             <div>
-              <h4>Easy to Implement</h4>
+              <h3>Easy to Implement</h3>
               <p>
                 Our processes have been refined over years of implementation
                 meaning our teams always deliver.
@@ -42,7 +42,7 @@ const Main = () => {
           <li>
             <img className={styles.iconchart} src={iconchart} alt="iconchart" />
             <div>
-              <h4>Enhanced Productivity</h4>
+              <h3>Enhanced Productivity</h3>
               <p>
                 Our customized platform with in-built analytics helps you manage
                 your distributed teams.
