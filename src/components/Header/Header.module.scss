@@ -1,0 +1,47 @@
+@import "../../styles/setup/variables.scss";
+@import "../../styles/setup/mixins.scss";
+
+.headerContainer {
+  background-color: $midnight-green;
+  @include flex-container(row, space-between, center, 30px);
+  position: relative;
+  padding: 173px 165px 250px;
+
+  
+  h1 {
+    @include typography(h1-large);
+    width: 635px;
+
+    span {
+      color: $light-coral;
+    }
+  }
+
+  .rightHeader {
+    @include flex-container(column, space-between, start, 79px);
+    width: 445px;
+
+    hr {
+      @include hr($rapture-blue)
+
+    }
+
+    p {
+      @include typography(body1);
+    }
+  }
+
+  .pattern1 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: -100px;
+    bottom: 250px;
+  }
+  .pattern2 {
+    position: absolute;
+    width: 400px;
+    right: 165px;
+    bottom: 0;
+  }
+}

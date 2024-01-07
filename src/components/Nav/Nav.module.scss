@@ -1,0 +1,23 @@
+@import "../../styles/setup/variables.scss";
+@import "../../styles/setup/mixins.scss";
+
+.navContainer {
+  background-color: $midnight-green;
+  padding: 77px 165px;
+
+  ul,
+  li {
+    @include flex-container(row, space-between, center, 80px);
+    list-style: none;
+
+    a {
+      text-decoration: none;
+      color: $white;
+      margin-right: 20px;
+    }
+  }
+
+  button {
+    @include button-style("primary", "normal");
+  }
+}

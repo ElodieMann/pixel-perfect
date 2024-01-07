@@ -1,0 +1,53 @@
+@import "../../styles/setup/variables.scss";
+@import "../../styles/setup/mixins.scss";
+
+.mainContainer {
+  background-color: $sacramento-state-green;
+  padding: 140px 165px 140px;
+  position: relative;
+
+  .pattern3 {
+    position: absolute;
+    bottom: 0;
+    right: -100px;
+  }
+  hr {
+    @include hr($light-coral);
+    margin-bottom: 54px;
+  }
+
+  .mainLayout {
+    @include flex-container($gap: 125px);
+    gap: 125px;
+    h2 {
+      @include typography(h2);
+      width: 445px;
+    }
+
+    ul {
+      @include flex-container(column, flex-start, flex-start, 54px);
+    }
+  }
+
+  .rightMain {
+    list-style: none;
+
+    li {
+      @include flex-container($gap: 23px);
+
+      h4 {
+        color: $light-coral;
+        margin-bottom: 16px;
+        @include typography(h3);
+      }
+      img {
+        width: 72px;
+        height: 72px;
+      }
+
+      p {
+        @include typography(body2);
+      }
+    }
+  }
+}
