@@ -1,0 +1,29 @@
+@import "../../styles/setup/variables.scss";
+@import "../../styles/setup/mixins.scss";
+
+.clientsContainer{
+    background-color: $sacramento-state-green;
+    padding: 140px 165px 151px;
+    position: relative;
+    @include flex-container(column, center, center, 70px);
+
+    & > :first-child {
+        position: absolute;
+        top: 0;
+        left: 0;
+       
+    }
+
+    h2 {
+        @include typography(h2);
+    }
+
+    .clientsIcon {
+        @include flex-container(row, space-between, center, 70px);
+        img {
+
+            height: 28px;
+
+        }
+    }
+}
