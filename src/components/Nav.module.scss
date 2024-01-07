@@ -1,0 +1,11 @@
+@import '../styles/setup/variables.scss';
+@import '../styles/setup/mixins.scss';
+
+.navContainer {
+    background-color: $midnight-green;
+}
+
+ul, .links {
+    @include flex-container(row, space-between, center);
+}
+

@@ -1,0 +1,102 @@
+@mixin typography($type) {
+
+    @if $type == "h1-large" {
+      font-size: 100px;
+      font-weight: $font-weight-bold;
+      line-height: 100px;
+    } @else if $type == "h1-small" {
+      font-size: 64px;
+      font-weight: $font-weight-semi-bold;
+      line-height: 56px;
+    } @else if $type == "h2" {
+      font-size: 48px;
+      font-weight: $font-weight-bold;
+      line-height: 48px;
+    } @else if $type == "h3" {
+      font-size: 18px;
+      font-weight: $font-weight-bold;
+      line-height: 28px;
+    } @else if $type == "body1" {
+      font-size: 18px;
+      font-weight: $font-weight-semi-bold;
+      line-height: 28px;
+    } @else if $type == "body2" {
+      font-size: 15px;
+      font-weight: $font-weight-semi-bold;
+      line-height: 25px;
+    }
+  }
+  
+  //buttons
+  @mixin button-style($button-type, $state) {
+    width: 153px;
+    height: 48px;
+    font-size: 18px;
+    border: none;
+    border-radius: 24px;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+    @include typography(body1);
+    @if $button-type == "primary" {
+      @if $state == "normal" {
+        color: $white;
+        border: 2px solid $white;
+      } @else if $state == "hover" {
+        background-color: $white;
+        color: $dark-green;
+      }
+    } @else if $button-type == "secondary" {
+      color: $dark-green;
+  
+      @if $state == "normal" {
+        background-color: $white;
+        border: 2px solid $white;
+      } @else if $state == "hover" {
+        background-color: $rapture-blue;
+      }
+    }
+  
+    @if $state == "disabled" {
+      background-color: $rapture-blue;
+      cursor: not-allowed;
+      opacity: 0.25;
+    }
+  }
+  
+  //FORM 
+  @mixin form-field-base {
+      padding: 1em;
+      color: $white;  
+      border: 2px solid transparent;  
+      border-radius: 4px;  
+      letter-spacing: -0.115px;
+  
+      line-height: 25px;
+  
+      @include typography(body2);
+  
+      &::placeholder {  
+        opacity: 0.6;
+  
+      }
+    
+      &:focus {  
+          color: $white;
+        outline: none;
+      }
+    
+      &.error {  
+        color: $light-coral  
+      }
+    }
+  
+    
+  
+    // FLEX
+    @mixin flex-container($direction: row, $justify: flex-start, $align: stretch) {
+      display: flex;
+      flex-direction: $direction;
+      justify-content: $justify;
+      align-items: $align;
+    }
