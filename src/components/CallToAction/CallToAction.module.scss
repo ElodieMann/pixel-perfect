@@ -1,24 +1,42 @@
 @import "../../styles/setup/variables.scss";
 @import "../../styles/setup/mixins.scss";
 
-.callToActionContainer{
-    background-color: $light-coral;
-    position: relative;
-    padding: 76px 260px  76px 263px;
-    @include flex-container(row, center, center, 260px);
+.callToActionContainer {
+  background-color: $light-coral;
+  position: relative;
+  padding: 76px 260px 76px 263px;
+  @include flex-container(row, center, center, 260px);
 
-    img {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-    }
+  @include respond-to(tablet) {
+    padding: 84px 98px 84px 97px;
+    gap: 84px;
+  }
+  @include respond-to(mobile) {
+    padding: 83px 24px;
+    @include flex-container(column, center, center, 24px);
+    text-align: center;
+  }
 
-    h2 {
-        @include typography(h2);
-        color: $sacramento-state-green;
-    }
+  img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
 
-    button{
-        @include button-style(primary, normal, dark)
+    @include respond-to(tablet) {
+      width: 120px;
     }
+  }
+
+  h2 {
+    @include typography(h2);
+    color: $sacramento-state-green;
+  }
+
+  button {
+    @include button-style(primary, normal, dark);
+
+    &:hover {
+      @include button-style(primary, hover, dark);
+    }
+  }
 }

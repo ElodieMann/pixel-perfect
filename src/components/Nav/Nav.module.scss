@@ -5,19 +5,74 @@
   background-color: $midnight-green;
   padding: 77px 165px;
 
+  @include respond-to(tablet) {
+    padding: 72px 40px;
+  }
+
+  @include respond-to(mobile) {
+    padding: 48px 24px;
+  }
+
   ul,
   li {
     @include flex-container(row, space-between, center, 80px);
     list-style: none;
 
+    @include respond-to(mobile) {
+      @include flex-container(row, space-between, center, 0);
+    }
+
+    img {
+      width: 160px;
+      height: 40px;
+
+      @include respond-to(tablet) {
+        width: 128px;
+        height: 32px;
+      }
+    }
+
     a {
       text-decoration: none;
       color: $white;
       margin-right: 20px;
+      @include typography(body1);
+
+      &:hover {
+        color: $light-coral;
+        cursor: pointer;
+      }
+
+      @include respond-to("mobile") {
+        display: none;
+      }
     }
   }
 
   button {
     @include button-style(primary, normal);
+
+    &:hover {
+      @include button-style(primary, hover);
+      cursor: pointer;
+    }
+
+    @include respond-to(mobile) {
+      display: none;
+    }
+  }
+
+  .hamburgerIcon {
+    display: none;
+
+    @include respond-to(mobile) {
+      display: block;
+      width: 20px;
+      height: 17px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 }

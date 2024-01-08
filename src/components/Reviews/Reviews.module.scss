@@ -5,6 +5,14 @@
   background-color: $deep-jungle-green;
   position: relative;
   padding: 140px 165px 151px;
+
+  @include respond-to(tablet) {
+    padding: 100px 98px 100px 97px;
+  }
+  @include respond-to(mobile) {
+    padding: 140px 24px 164px;
+  }
+
   & > :first-child {
     position: absolute;
     top: 0;
@@ -28,6 +36,10 @@
   ul {
     @include flex-container(row, space-between, center, 30px);
 
+    @include respond-to(tablet) {
+      @include flex-container(column, space-between, center, 48px);
+    }
+  
     li {
       position: relative;
       @include flex-container(column, space-between, center, 24px);

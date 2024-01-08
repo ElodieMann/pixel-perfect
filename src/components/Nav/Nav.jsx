@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
+import hamburgerIcon from "../../assets/images/icon-hamburger.svg";
 import styles from "./Nav.module.scss";
 
 const Nav = () => {
@@ -19,6 +20,7 @@ const Nav = () => {
             <button>contact us</button>
           </Link>
         </li>
+            <img className={styles.hamburgerIcon} src={hamburgerIcon} alt="hamburgerIcon" />
       </ul>
     </div>
   );

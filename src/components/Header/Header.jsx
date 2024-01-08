@@ -15,9 +15,7 @@ const Header = () => {
       <div className={styles.rightHeader}>
         <hr />
         <p>
-          Finding the right people and building high performing teams can be
-          hard. Most companies aren’t tapping into the abundance of global
-          talent. We’re about to change that.
+          Finding the right people and building high performing teams can be hard. Most companies aren’t tapping into the abundance of global talent. We’re about to change that.
         </p>
       </div>
       <img className={styles.pattern2} src={pattern2} alt="pattern2" />

@@ -12,7 +12,7 @@ const Main = () => {
       <img className={styles.pattern3} src={pattern3} alt="pattern3" />
       <div className={styles.mainLayout}>
         <div className={styles.leftMain}>
-          <h2>Build & manage <br /> distributed teams <br /> like no one else.</h2>
+          <h2>Build & manage distributed teams like no one else.</h2>
         </div>
         <ul className={styles.rightMain}>
           <li>

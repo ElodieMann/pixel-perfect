@@ -52,6 +52,13 @@
     input {
       @include form-field-base(input, normal);
       width: 540px;
+
+      &:focus {
+        @include form-field-base(input, active);
+      }
+      &.error {
+        @include form-field-base(input, error);
+      }
     }
     textarea {
       @include form-field-base(textarea, normal);
