@@ -1,29 +1,53 @@
 @import "../../styles/setup/variables.scss";
 @import "../../styles/setup/mixins.scss";
 
-.clientsContainer{
-    background-color: $sacramento-state-green;
-    padding: 140px 165px 151px;
-    position: relative;
-    @include flex-container(column, center, center, 70px);
+.clientsContainer {
+  background-color: $sacramento-state-green;
+  padding: 140px 165px 151px;
+  position: relative;
+  @include flex-container(column, center, center, 70px);
 
-    & > :first-child {
-        position: absolute;
-        top: 0;
-        left: 0;
-       
+  @include respond-to(tablet) {
+    padding: 100px 36px 107px;
+    gap: 52px;
+  }
+  @include respond-to(mobile) {
+    padding: 88px 24px 108px;
+    gap: 64px;
+  }
+
+  & > :first-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include respond-to(tablet) {
+      top: -100px;
     }
-
-    h2 {
-        @include typography(h2);
+    @include respond-to(tablet) {
+      left: -100px;
     }
+  }
 
-    .clientsIcon {
-        @include flex-container(row, space-between, center, 70px);
-        img {
+  h2 {
+    @include typography(h2);
+  }
 
-            height: 28px;
+  .clientsIcon {
+    @include flex-container(row, space-between, center, 70px);
+    @include respond-to(tablet) {
+        gap: 30px;
+      }
+    @include respond-to(mobile) {
+        flex-direction: column;
+        gap: 40px;
+      }
+    img {
+      height: 28px;
 
-        }
+      @include respond-to(tablet) {
+        height: 17px;
+        gap: 30px;
+      }
     }
+  }
 }

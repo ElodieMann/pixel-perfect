@@ -12,9 +12,9 @@ const HeaderAbout = () => {
         <hr />
         <p>
           We help companies build dynamic teams made up of top global talent.
-          Using our <br/> network of passionate professionals we drive innovation and
-          deliver incredible <br/> outcomes. Talented, diverse teams shape the best
-          products and experiences. We’ll <br/>bring those teams to you.
+          Using our  network of passionate professionals we drive innovation and
+          deliver incredibleoutcomes. Talented, diverse teams shape the best
+          products and experiences. We’ll bring those teams to you.
         </p>
       </div>
 

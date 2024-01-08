@@ -5,15 +5,28 @@
   background-color: $deep-jungle-green;
   padding: 140px 165px 168px;
   position: relative;
+
+  @include respond-to(tablet) {
+    padding: 100px 98px 128px 97px ;
+  }
+  @include respond-to(mobile) {
+    padding: 88px 24px 108px;
+  }
+
   & > :first-child {
     position: absolute;
     top: 0;
     left: -100px;
+
+    @include respond-to(mobile) {
+      top: -100px;
+   }
   }
   & > :nth-child(2) {
     position: absolute;
     bottom: 0;
     right: 0;
+
   }
 
   h2 {
@@ -30,6 +43,19 @@
     column-gap: 30px;
     list-style: none;
     text-align: center;
+
+    @include respond-to(tablet) {
+      grid-template-columns: repeat(2, 281px);
+      grid-template-rows: repeat(3, 253px);
+      column-gap: 11px;
+    }
+    @include respond-to(mobile) {
+      grid-template-columns: 327px;
+      grid-template-rows: repeat(6, 253px);
+      row-gap: 52px;
+    }
+
+
     li {
       position: relative;
       background-color: $sacramento-state-green;
@@ -67,6 +93,10 @@
 
     & > :last-child {
       padding: 35px 48px 63px;
+
+      @include respond-to(tablet) {
+        padding: 35px 23px 63px ;
+      }
 
       & > :nth-child(2) {
         @include typography(body2);
