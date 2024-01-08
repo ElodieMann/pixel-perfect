@@ -40,7 +40,6 @@
       font-size: 15px;
       line-height: 28px;
     }
-
   } @else if $type == "body2" {
     font-size: 15px;
     font-weight: $font-weight-semi-bold;
@@ -59,6 +58,7 @@
   transition: background-color 0.3s, opacity 0.3s;
   @include typography(body1);
 
+  
   @if $theme == "light" {
     @if $button-type == "primary" {
       @if $state == "normal" {
@@ -110,19 +110,24 @@
   border-bottom: 1px solid $white;
   line-height: 25px;
   border: none;
+  width: 540px;
   @include typography(body2);
-
+ 
   padding: 0 0 17px 14px;
   &::placeholder {
     color: $white;
   }
+
+
+  @include respond-to(mobile) {
+    width: 325px;
+  }
+  
   @if $type == "input" {
-    width: 248px;
-    height: 42px;
+    height: 65px;
     border-bottom: 1px solid $white;
   } @else if $type == "textarea" {
-    width: 248px;
-    height: 84px;
+    height: 107px;
     border-bottom: 1px solid $white;
   }
 

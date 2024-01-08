@@ -28,6 +28,7 @@
     @include typography(h2);
     text-align: center;
     margin-bottom: 56px;
+    
     span {
       color: $rapture-blue;
     }
@@ -44,6 +45,7 @@
       position: relative;
       @include flex-container(column, space-between, center, 24px);
       padding: 36px 0 11px;
+      
       .iconquotes {
         position: absolute;
         top: 0;

@@ -5,10 +5,12 @@
   background-color: $sacramento-state-green;
   padding: 140px 165px 140px;
   position: relative;
-
+  overflow: hidden; 
+  
   @include respond-to(tablet) {
     padding: 100px 98px 100px 97px;
   }
+
   @include respond-to(mobile) {
     padding: 64px 24px;
   }
@@ -22,6 +24,7 @@
       top: 0;
     }
   }
+
   hr {
     @include hr($light-coral);
     margin-bottom: 54px;
@@ -33,6 +36,7 @@
     @include respond-to(tablet) {
       @include flex-container(column, center, start, 64px);
     }
+
     @include respond-to(mobile) {
       @include flex-container(column, center, start, 56px);
     }
@@ -48,6 +52,7 @@
 
     ul {
       @include flex-container(column, flex-start, flex-start, 54px);
+
       @include respond-to(mobile) {
         gap: 48px;
       }
@@ -68,16 +73,17 @@
       h3 {
         color: $light-coral;
         margin-bottom: 16px;
+
         @include typography(h3);
 
         @include respond-to(mobile) {
           margin-bottom: 8px;
         }
       }
+
       img {
         width: 72px;
         height: 72px;
-      
       }
 
       p {

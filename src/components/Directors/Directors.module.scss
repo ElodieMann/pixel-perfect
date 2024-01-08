@@ -7,8 +7,9 @@
   position: relative;
 
   @include respond-to(tablet) {
-    padding: 100px 98px 128px 97px ;
+    padding: 100px 98px 128px 97px;
   }
+
   @include respond-to(mobile) {
     padding: 88px 24px 108px;
   }
@@ -20,13 +21,13 @@
 
     @include respond-to(mobile) {
       top: -100px;
-   }
+    }
   }
+
   & > :nth-child(2) {
     position: absolute;
     bottom: 0;
     right: 0;
-
   }
 
   h2 {
@@ -37,8 +38,9 @@
 
   ul {
     display: grid;
-    grid-template-columns: repeat(3, 350px);
-    grid-template-rows: repeat(2, 253px);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-auto-rows: 253px; 
+    justify-content: center;
     row-gap: 76px;
     column-gap: 30px;
     list-style: none;
@@ -49,12 +51,12 @@
       grid-template-rows: repeat(3, 253px);
       column-gap: 11px;
     }
+
     @include respond-to(mobile) {
       grid-template-columns: 327px;
       grid-template-rows: repeat(6, 253px);
       row-gap: 52px;
     }
-
 
     li {
       position: relative;
@@ -95,7 +97,7 @@
       padding: 35px 48px 63px;
 
       @include respond-to(tablet) {
-        padding: 35px 23px 63px ;
+        padding: 35px 23px 63px;
       }
 
       & > :nth-child(2) {
@@ -109,7 +111,6 @@
         height: 20px;
         @include flex-container(row, center, center, 15px);
         margin: 0 auto;
-        
       }
 
       .cross {

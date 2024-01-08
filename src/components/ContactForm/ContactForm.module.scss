@@ -7,17 +7,52 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   position: relative;
+  overflow: hidden;
+  @include respond-to(tablet) {
+    padding: 48px 126px 112px 127px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 324px 425px;
+    row-gap: 84px;
+    justify-content: center;
+  }
 
-  & > :first-child {
+  @include respond-to(mobile) {
+    padding: 88px 24px 108px;
+    @include flex-container(column, center, center, 56px);
+  }
+
+  .patern11 {
     position: absolute;
     top: 51px;
     left: -100px;
+
+    @include respond-to(mobile) {
+      display: none;
+    }
+  }
+
+  .leftContact {
+    @include flex-container(column, start, start, 16px);
+
+    @include respond-to(tablet) {
+      @include flex-container(column, center, center, 24px);
+    }
   }
 
   h1 {
     @include typography(h1-small);
     line-height: 100px;
     width: 350px;
+
+    @include respond-to(tablet) {
+      text-align: center;
+      line-height: 56px;
+    }
+
+    @include respond-to(mobile) {
+      text-align: center;
+      line-height: 56px;
+    }
   }
 
   h2 {
@@ -33,6 +68,10 @@
     li {
       @include flex-container(row, start, center, 23px);
 
+      @include respond-to(tablet) {
+        @include flex-container(row, center, center, 23px);
+      }
+
       img {
         width: 72px;
         height: 72px;
@@ -41,31 +80,38 @@
       p {
         @include typography(body1);
         width: 445px;
+
+        @include respond-to(mobile) {
+          width: 232px;
+        }
       }
     }
   }
 
   form {
-    display: grid;
-    grid-template-rows: repeat(4, 540px), 1080px;
+    @include respond-to(mobile) {
+      width: 325px;
+    }
 
     input {
       @include form-field-base(input, normal);
-      width: 540px;
 
       &:focus {
         @include form-field-base(input, active);
       }
+
       &.error {
         @include form-field-base(input, error);
       }
     }
+
     textarea {
       @include form-field-base(textarea, normal);
-      width: 540px;
     }
+
     input[type="submit"] {
       @include button-style(secondary, normal);
+      margin-top: 24px;
     }
   }
 }

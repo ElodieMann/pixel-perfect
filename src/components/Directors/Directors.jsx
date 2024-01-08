@@ -12,6 +12,37 @@ import iconcross from "../../assets/images/icon-cross.svg";
 
 import styles from "./Directors.module.scss";
 
+
+const directorsData = [
+  {
+    avatar: avatarnikita,
+    name: "Nikita Marks",
+  },
+  {
+    avatar: avatarchristian,
+    name: "Cristian Duncan",
+  },
+  {
+    avatar: avatarcruz,
+    name: "Cruz Hamer",
+  },
+  {
+    avatar: avatardrake,
+    name: "Drake Heaton",
+  },
+  {
+    avatar: avatargriffin,
+    name: "Griffin Wise",
+  },
+  {
+    name: "Aden Allan",
+    quote:
+      "Empowered teams create truly amazing products. Set the north star and let them follow it.",
+    twitterIcon: iconptwitter,
+    linkedinIcon: iconplinkedin,
+  },
+];
+
 const Directors = () => {
   return (
     <div className={styles.directorsContainer}>
@@ -19,67 +50,24 @@ const Directors = () => {
       <img src={pattern9} alt="pattern9" />
       <h2>Meet the directors</h2>
       <ul>
-        <li>
-          <img
-            className={styles.avatar}
-            src={avatarnikita}
-            alt="avatarnikita"
-          />
-          <p>Nikita Marks</p>
-          <div className={styles.cross}>
-            <img src={iconcross} alt="iconcross" />
-          </div>
-        </li>
-        <li>
-          <img
-            className={styles.avatar}
-            src={avatarchristian}
-            alt="avatarchristian"
-          />
-          <p>Cristian Duncan</p>
-          <div className={styles.cross}>
-            <img src={iconcross} alt="iconcross" />
-          </div>
-        </li>
-        <li>
-          <img className={styles.avatar} src={avatarcruz} alt="avatarcruz" />
-          <p>Cruz Hamer</p>
-          <div className={styles.cross}>
-            <img src={iconcross} alt="iconcross" />
-          </div>
-        </li>
-        <li>
-          <img className={styles.avatar} src={avatardrake} alt="avatardrake" />
-          <p>Drake Heaton</p>
-          <div className={styles.cross}>
-            <img src={iconcross} alt="iconcross" />
-          </div>
-        </li>
-        <li>
-          <img
-            className={styles.avatar}
-            src={avatargriffin}
-            alt="avatargriffin"
-          />
-          <p>Griffin Wise</p>
-          <div className={styles.cross}>
-            <img src={iconcross} alt="iconcross" />
-          </div>
-        </li>
-        <li>
-          <p>Aden Allan</p>
-          <p>
-            “Empowered teams create truly amazing products. Set the north star
-            and let them follow it.”
-          </p>
-          <div className={styles.socialIcon}>
-            <img src={iconptwitter} alt="iconpintwitter" />
-            <img src={iconplinkedin} alt="iconplinkedin" />
-          </div>
-          <div className={styles.cross}>
-            <img src={iconcross} alt="iconcross" />
-          </div>
-        </li>
+        {directorsData.map((director, index) => (
+          <li key={index}>
+            {director.avatar && (
+              <img className={styles.avatar} src={director.avatar} alt={`avatar${index}`} />
+            )}
+            <p>{director.name}</p>
+            {director.quote && <p>{director.quote}</p>}
+            {director.twitterIcon && director.linkedinIcon && (
+              <div className={styles.socialIcon}>
+                <img src={director.twitterIcon} alt="iconpintwitter" />
+                <img src={director.linkedinIcon} alt="iconplinkedin" />
+              </div>
+            )}
+            <div className={styles.cross}>
+              <img src={iconcross} alt="iconcross" />
+            </div>
+          </li>
+        ))}
       </ul>
     </div>
   );

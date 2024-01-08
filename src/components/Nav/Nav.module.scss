@@ -4,6 +4,7 @@
 .navContainer {
   background-color: $midnight-green;
   padding: 77px 165px;
+  
 
   @include respond-to(tablet) {
     padding: 72px 40px;
@@ -11,16 +12,13 @@
 
   @include respond-to(mobile) {
     padding: 48px 24px;
+    @include flex-container(row, space-between, center, 0);
   }
 
   ul,
   li {
     @include flex-container(row, space-between, center, 80px);
     list-style: none;
-
-    @include respond-to(mobile) {
-      @include flex-container(row, space-between, center, 0);
-    }
 
     img {
       width: 160px;
@@ -43,13 +41,13 @@
         cursor: pointer;
       }
 
-      @include respond-to("mobile") {
+      @include respond-to(mobile) {
         display: none;
       }
     }
   }
 
-  button {
+  .btn {
     @include button-style(primary, normal);
 
     &:hover {
@@ -73,6 +71,56 @@
       &:hover {
         cursor: pointer;
       }
+    }
+  }
+
+  .menuOpen {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    padding: 20px;
+  }
+
+  .overlay {
+    position: fixed;
+    padding: 112px 48px 391px;
+    top: 0;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    background-color: $police-blue;
+    @include flex-container(column, start, start, 24px);
+    z-index: 20;
+
+    a {
+      color: $white;
+      margin: 10px 0;
+      text-decoration: none;
+      @include typography(body1);
+
+      &:hover {
+        color: $light-coral;
+      }
+
+      button {
+        @include button-style(primary, normal);
+
+        &:hover {
+          @include button-style(primary, hover);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .closeIcon {
+      position: absolute;
+      top: 56px;
+      right: 25px;
     }
   }
 }

@@ -6,11 +6,12 @@
   position: relative;
   padding: 76px 260px 76px 263px;
   @include flex-container(row, center, center, 260px);
-
+  overflow: hidden;
   @include respond-to(tablet) {
     padding: 84px 98px 84px 97px;
     gap: 84px;
   }
+  
   @include respond-to(mobile) {
     padding: 83px 24px;
     @include flex-container(column, center, center, 24px);

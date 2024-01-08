@@ -5,6 +5,7 @@
   background-color: $midnight-green;
   position: relative;
   padding: 47px 165px 120px;
+  overflow: hidden; 
   @include flex-container(row, center, center, 30px);
 
   @include respond-to(tablet) {
@@ -12,6 +13,7 @@
     @include flex-container(column, center, center, 24px);
     text-align: center;
   }
+
   @include respond-to(mobile) {
     padding: 32px 24px 108px;
     @include flex-container(column, center, center, 16px);
@@ -23,6 +25,7 @@
       @include typography(h1-small);
       line-height: 100px;
     }
+
     @include respond-to(tablet) {
       @include flex-container(column, center, center, 0);
     }
@@ -30,17 +33,21 @@
 
   div {
     @include flex-container(column, center, space-between, 40px);
+
     @include respond-to(tablet) {
       width: 683px;
       padding: 0 116px 0 110px;
     }
-    @include respond-to(tablet) {
+
+    @include respond-to(mobile) {
       width: 327px;
       padding: 0;
     }
   }
+
   hr {
     @include hr($light-coral);
+
     @include respond-to(tablet) {
       display: none;
     }

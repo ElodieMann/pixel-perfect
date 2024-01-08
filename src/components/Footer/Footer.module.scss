@@ -5,26 +5,25 @@
   background-color: $dark-green;
   padding: 48px 165px;
   display: grid;
-  grid-template-columns: 285px 445px 380px;
-
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));  
+  overflow: hidden;
   @include respond-to(tablet) {
     padding: 56px 40px 56px 39px;
-    grid-template-columns: 107px 280px;
-
+    grid-template-columns: repeat(auto-fit, minmax(107px, 1fr)); // Utilisation de auto-fit et minmax
     grid-template-areas:
       "fr sec"
       "th th";
-      column-gap: 302px;
-      row-gap: 34px;
+    column-gap: 302px;
+    row-gap: 34px;
   }
+
   @include respond-to(mobile) {
     padding: 83px 24px;
-    grid-template-columns: 1fr;  
+    grid-template-columns: 1fr;
     grid-template-areas:
       "fr"
       "sec"
       "th";
-
   }
 
   & > :first-child {
@@ -33,7 +32,6 @@
     @include respond-to(mobile) {
       @include flex-container(column, center, center, 5px);
     }
-
 
     a {
       text-decoration: none;
@@ -45,8 +43,6 @@
         color: $light-coral;
         cursor: pointer;
       }
-
-    
     }
   }
 
@@ -54,28 +50,32 @@
     list-style: none;
     @include typography(body2);
     @include flex-container(column, space-between, flex-start, 0px);
+
     @include respond-to(tablet) {
       align-items: flex-end;
     }
+
     @include respond-to(mobile) {
       align-items: center;
     }
   }
+
   & > :nth-child(3) {
     @include typography(body2);
     @include flex-container(column, space-between, flex-end, 0px);
+
     @include respond-to(tablet) {
       grid-area: th;
       grid-row: span 2;
       @include flex-container(row, space-between, flex-end, 0px);
     }
+
     @include respond-to(mobile) {
       @include flex-container(column, space-between, center, 16px);
-
     }
+
     ul {
       list-style: none;
-
       width: 104px;
       height: 24px;
       @include flex-container(row, space-between, center, 0px);

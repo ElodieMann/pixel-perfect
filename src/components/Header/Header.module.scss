@@ -12,9 +12,9 @@
     text-align: center;
     padding: 48px 40px 156px 45px;
   }
+
   @include respond-to(mobile) {
     @include flex-container(column, space-between, center, 18px);
-
     padding: 32px 24px 197px;
   }
 
@@ -29,6 +29,7 @@
     @include respond-to(tablet) {
       width: 683px;
     }
+
     @include respond-to(mobile) {
       width: 327px;
     }
@@ -39,19 +40,22 @@
     width: 445px;
 
     @include respond-to(tablet) {
-      padding: 0 116px 0 110px;
-     }
+      width: 457px;
+    }
+    @include respond-to(mobile) {
+    width: 327px;
+    }
 
     hr {
       @include hr($rapture-blue);
+
       @include respond-to(tablet) {
         display: none;
-       }
+      }
     }
 
     p {
       @include typography(body1);
-      
     }
   }
 
@@ -61,10 +65,12 @@
     height: 200px;
     left: -100px;
     bottom: 250px;
+
     @include respond-to(tablet) {
-     display: none;
+      display: none;
     }
   }
+
   .pattern2 {
     position: absolute;
     width: 400px;
@@ -73,10 +79,11 @@
 
     @include respond-to(tablet) {
       width: 40%;
-     }
+    }
+
     @include respond-to(mobile) {
       width: 100%;
       right: 0;
-     }
+    }
   }
 }
